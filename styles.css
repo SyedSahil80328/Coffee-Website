@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-size: 25px;
+}
+section {
+    padding: 3em;
+    width: 100%;
+}
+ul.navigator {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
+ul.navigator li {
+    list-style-type: none;
+    font-size: 28px;
+}
+ul.navigator li:before {
+    vertical-align: bottom;
+
+}
+h1, h2 {
+    font-family: "Titillium Web", sans-serif;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+h2 {
+    font-size: 35px;
+}
+a {
+    text-decoration: none;
+}
+a div.container {
+    border: 2px solid red;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+a div.container:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.01);
+}
+div.element-left, div.element-right {
+    width: 100%;
+    font-size: 25px;
+}
+div.element-right::before {
+    content: "$"
+}
+div.element-right {
+    text-align: right;
+    font-family: cursive;
+    font-style: italic;
+}
+p.content {
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+img {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 0.3s ease; /* Smooth transition for dim effect */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height/width calculations */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.image-container:hover img {
+    opacity: 0.6; /* Dim image on hover */
+}
